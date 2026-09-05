@@ -43,6 +43,31 @@ The Data Warehouse uses a Star Schema optimized for analytical queries. FactSale
 
 <img width="795" height="979" alt="StarSchema" src="https://github.com/user-attachments/assets/c24f8a3a-36af-407b-ab98-0c3b59335840" />
 
+## **🏭Azure Data Factory ETL**
+
+Azure Data Factory is used as the main orchestration layer for the data pipeline.
+
+The master pipeline coordinates multiple child pipelines responsible for CDC processing, full loads, staging and Data Warehouse loading.
+
+
+**The pipeline flow includes:**
+
+CDC pipelines for Customer, Person, Product and Sales Order data
+
+Full Load pipelines for initial and supporting data loads
+
+Loading data from ADLS Gen2 into Synapse staging tables
+
+Execution of SQL stored procedures to transform and load the Data Warehouse
+
+Loading dimension tables before the final FactSales table
+
+<img width="1706" height="922" alt="image" src="https://github.com/user-attachments/assets/751b159f-fc47-49a6-aec4-4c796b7f2c0a" />
+
+
+
+
+
 ## 📊 Power BI Dashboard
 
 The Power BI dashboard provides an interactive overview of sales performance.
@@ -73,6 +98,10 @@ Category
 Subcategory
 
 This allows users to move from a high-level category view to detailed product subcategory analysis.
+
+## **🛡️ License**
+
+This project is licensed under the MIT License. You are free to use, modify, and share this project with proper attribution.
 
 
 

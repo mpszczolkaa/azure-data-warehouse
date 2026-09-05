@@ -29,6 +29,7 @@ The pipeline performs the following steps:
 ## **🔄 Change Data Capture**
 
 Change Data Capture (CDC) was implemented to process changes occurring in the AdventureWorks source database.
+CDC uses the last processed LSN stored in the ETL_Control table to identify and process only new changes. The changes are stored as Parquet files in ADLS and then loaded into dedicated Synapse staging CDC tables for further processing.
 
 The pipeline handles:
 

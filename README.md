@@ -38,3 +38,45 @@ The pipeline handles:
 
 **DELETE** –deleted records are removed from the Data Warehouse
 
+## **⭐Star Schema**
+The Data Warehouse uses a Star Schema optimized for analytical queries. FactSales contains sales transactions and measures while dimension tables provide customer, product and date context.
+
+<img width="795" height="979" alt="StarSchema" src="https://github.com/user-attachments/assets/c24f8a3a-36af-407b-ab98-0c3b59335840" />
+
+## 📊 Power BI Dashboard
+
+The Power BI dashboard provides an interactive overview of sales performance.
+<img width="1437" height="555" alt="image" src="https://github.com/user-attachments/assets/55494968-3b17-48d0-bd7d-ab28dfca4f2c" />
+
+### Dashboard Features
+
+ **Total Sales** — total revenue generated from sales.
+ 
+ **Total Orders** — total number of sales orders.
+ 
+ **Total Quantity** — total quantity of products sold.
+ 
+ **Total Sales by Year** — sales trends over time.
+ 
+ **Sales by Category and Subcategory** — sales analysis by product category with drill-down to subcategories.
+ 
+ **Year Slicer** — interactive filtering by year.
+ 
+ **Interactive Visuals** — selecting data points dynamically filters other visuals.
+
+### Drill-Down
+
+The **Sales by Category and Subcategory** visual supports drill-down analysis:
+
+Category
+   ↓
+Subcategory
+
+This allows users to move from a high-level category view to detailed product subcategory analysis.
+
+
+
+
+
+
+

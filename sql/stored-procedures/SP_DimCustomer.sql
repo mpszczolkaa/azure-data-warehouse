@@ -3,7 +3,8 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-
+--INSERT NEW CUSTOMER--
+    
     INSERT INTO dw.DimCustomer
     (
         CustomerID,
@@ -35,6 +36,7 @@ BEGIN
       );
 
 
+--UPDATE DATA CUSTOMERS--
     UPDATE d
     SET
         d.PersonID = c.PersonID,
@@ -46,7 +48,7 @@ BEGIN
 
     WHERE c.__$operation = 4;
 
-
+--UPDATE DATA PERSON--
     UPDATE d
     SET
         d.FirstName = p.FirstName,
@@ -59,7 +61,7 @@ BEGIN
 
     WHERE p.__$operation = 4;
 
-
+--DELETE CUSTOMER--
 
     DELETE d
     FROM dw.DimCustomer d

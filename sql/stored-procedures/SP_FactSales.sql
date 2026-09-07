@@ -165,3 +165,5 @@ BEGIN
 
     DROP TABLE #HeaderChanges;
     DROP TABLE #DetailChanges;
+END;
+GO

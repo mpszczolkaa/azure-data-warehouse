@@ -3,9 +3,8 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    ------------------------------------------------------------
-    -- 1. Najnowsze zmiany z SalesOrderHeader
-    ------------------------------------------------------------
+    --LATEST CHANGES SalesOrderHeader--
+
 
     IF OBJECT_ID('tempdb..#HeaderChanges') IS NOT NULL
         DROP TABLE #HeaderChanges;
@@ -26,9 +25,8 @@ BEGIN
     WHERE rn = 1;
 
 
-    ------------------------------------------------------------
-    -- 2. Najnowsze zmiany z SalesOrderDetail
-    ------------------------------------------------------------
+    --LATEST CHANGES SalesOrderDetail--
+    
 
     IF OBJECT_ID('tempdb..#DetailChanges') IS NOT NULL
         DROP TABLE #DetailChanges;
@@ -49,9 +47,9 @@ BEGIN
     WHERE rn = 1;
 
 
-    ------------------------------------------------------------
-    -- 3. UPDATE istniejących rekordów FactSales
-    ------------------------------------------------------------
+    
+     
+ --UPDATE FactSales--  
 
     UPDATE f
     SET
@@ -86,9 +84,8 @@ BEGIN
     WHERE d.__$operation = 4;
 
 
-    ------------------------------------------------------------
-    -- 4. INSERT nowych rekordów FactSales
-    ------------------------------------------------------------
+     
+   --INSERT FactSales--
 
     INSERT INTO dw.FactSales
     (
@@ -140,9 +137,9 @@ BEGIN
       );
 
 
-    ------------------------------------------------------------
-    -- 5. DELETE rekordów usuniętych w źródle
-    ------------------------------------------------------------
+    
+    
+  -- DELETE FactSales--
 
     DELETE f
     FROM dw.FactSales f
@@ -159,9 +156,9 @@ BEGIN
        AND f.SalesOrderDetailID = d.SalesOrderDetailID;
 
 
-    ------------------------------------------------------------
-    -- 6. Usunięcie tabel tymczasowych
-    ------------------------------------------------------------
+    
+    --DROP TEMPORARY TABLES--
+   
 
     DROP TABLE #HeaderChanges;
     DROP TABLE #DetailChanges;

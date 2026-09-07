@@ -3,7 +3,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-  
+  --INSERT NEW PRODUCT--
 
     INSERT INTO dw.DimProduct
     (
@@ -47,7 +47,7 @@ BEGIN
       );
 
 
-
+--UPDATE PRODUCT--
 
     UPDATE d
     SET
@@ -77,7 +77,7 @@ BEGIN
     WHERE p.__$operation = 4;
 
 
-
+--DELETE PRODUCT--
 
     DELETE d
     FROM dw.DimProduct d
@@ -88,3 +88,4 @@ BEGIN
     WHERE p.__$operation = 1;
 
 END;
+GO

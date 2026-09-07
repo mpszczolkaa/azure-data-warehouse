@@ -72,3 +72,4 @@ BEGIN
     WHERE c.__$operation = 1;
 
 END;
+GO

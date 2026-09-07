@@ -58,7 +58,7 @@ The master pipeline coordinates multiple child pipelines responsible for CDC pro
 
 CDC pipelines for Customer, Person, Product and Sales Order data
 
-Full Load pipelines for initial and supporting data loads
+Full Load pipelines for tables ProductCategory and ProductSubcategory
 
 Loading data from ADLS Gen2 into Synapse staging tables
 

@@ -1,4 +1,4 @@
-# 📊 Azure Data Warehouse
+# 🗄️ Azure Data Warehouse
 
 This project demonstrates how to build an end-to-end Data Warehouse solution using Microsoft Azure, Azure Data Factory, Azure Data Lake Storage Gen2 and Azure Synapse Analytics.
 

@@ -2,6 +2,7 @@
 --ENABLE FOR DATABASE--
 EXEC sys.sp_cdc_enable_db;
 
+
 --CDC table Sales.Customer--
 EXEC sys.sp_cdc_enable_table
     @source_schema = 'Sales',
